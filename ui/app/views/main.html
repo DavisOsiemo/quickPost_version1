@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - About</title>
+    <title>QuickPost - Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body ng-app="blogApp">
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -57,7 +57,7 @@
                     <a href="about.html">New Post</a>
                 </li>
                 <li>
-                    <a href="post.html">SignUp/SignIn</a>
+                    <a href="#/signup">SignUp/SignIn</a>
                 </li>
                 <li>
                     <a href="contact.html">User_name</a>
@@ -79,7 +79,7 @@
                     <h2>Releasing Beta soon...</h2>
                     <hr class="small">
                     <span class="subheading">Work in progress...</span>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -88,8 +88,12 @@
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <p>Quick and Responsive website for Bloggers - with #hashTags for quicker updates..!!</p>
+        <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>Quick and Responsive website for Bloggers - with #hashTags for quick updates..!!</p>
+        </div> -->
+
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <div ng-view> </div>
         </div>
     </div>
 </div>
@@ -134,13 +138,32 @@
 </footer>
 
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="./js/vendor/bootstrap/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../js/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="../js/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="../js/vendor/bootstrap/clean-blog.min.js"></script>
+<script src="../js/vendor/bootstrap/js/clean-blog.min.js"></script>
+
+<!-- Vendor Javascripts -->
+<script type="text/javascript" src="../js/vendor/angular/angular.js"></script>
+<script type="text/javascript" src="../js/vendor/angular/angular-route.js"></script>
+<script type="text/javascript" src="../js/vendor/angular/angular-cookies.js"></script>
+<script type="text/javascript" src="../js/vendor/angular/angular-resource.js"></script>
+
+<!-- Custom JavaScript Modules -->
+<script type="text/javascript" src="../app/modules/mainApp.js"></script>
+
+<!-- Custom JavaScript Services -->
+<script type="text/javascript" src="../app/services/UserService.js"></script>
+
+<!-- Custom JavaScripts Controllers-->
+<script type="text/javascript" src="../app/controllers/MainController.js"></script>
+<script type="text/javascript" src="../app/controllers/SignupController.js"></script>
+
+
+
 
 </body>
 

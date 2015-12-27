@@ -16,12 +16,11 @@ router.use(express.static(rootPath + '/ui'));
 
 router.get('/partials/*', function(req, res) {
     console.log('partials reached');
-    res.sendFile(partialspath + req.params[0])
+    res.sendFile(partialsPath + req.params[0])
 });
 
 router.get('/', function(req, res) {
     console.log(rootPath + '/views/main.html');
-    console.log('grocery reached');
     res.sendFile(viewPath + 'main.html');
 });
 
