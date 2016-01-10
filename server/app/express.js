@@ -12,10 +12,6 @@ var rootPath = path.normalize(__dirname + '../../../');
 
 
 
-
-
-
-
 // Custom Routes declaration
 var mainRouter=require('../routes/main');
 var userRouter=require('../routes/user')
@@ -41,9 +37,7 @@ module.exports=function(app){
 
 		}
 
-	});
-
-	
+	});	
 
 }
 

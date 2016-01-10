@@ -1,7 +1,6 @@
 "use strict";
 var mongoose=require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var dbUrl='mongodb://localhost:27017/blogDatabase';
 var User=require('../models/user');
 
 function UserDAO() {
@@ -21,17 +20,9 @@ function UserDAO() {
         }
 
         var newUser=new User(user);
-
-
-		/*mongoose.connect(dbUrl,function(err,db){
-			if(err){
-				console.log("Error in connecting database !!\n\n"+err);
-			}else{
-				console.log("Database :"+db);
-			}*/
 			
 
-			newUser.save(user, function (err, result) {           
+			newUser.save(function (err, result) {       
 
 	            if (!err) {
 	                console.log("Inserted new user");
@@ -39,13 +30,9 @@ function UserDAO() {
 	            }else{
 	            	console.log("Error in saving new User ..!!!");
 	            	callback(err, null);
-	            }
-
-	            
+	            }	            
 
 	        });
-
-		//});
 	}
 }
 

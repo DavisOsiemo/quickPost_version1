@@ -8,14 +8,10 @@ var rootPath = path.normalize(__dirname+'../../../');
 var viewPath = rootPath + "ui/app/views/";
 var partialsPath = viewPath + "partials/";
 
-console.log(rootPath);
-console.log(viewPath);
-console.log(partialsPath);
 
 router.use(express.static(rootPath + '/ui'));
 
 router.get('/partials/*', function(req, res) {
-    console.log('partials reached');
     res.sendFile(partialsPath + req.params[0])
 });
 
