@@ -20,4 +20,19 @@ router.route('/register').post(function(req,res) {
 	 
 });
 
+router.route('/login').post(function(req,res) {
+	
+	UserBL.handleLoginRequest(req,function(error,success){
+		if(error){
+			res.send(error);
+		}else{
+			res.status(200);
+			res.send(success);
+		}
+	});
+	 
+});
+
+
+
 module.exports = router;
